@@ -8,12 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Create pull request from dev to main
-        uses: peter-evans/create-pull-request@v4
-        with:
-          token: ${{ secrets.GITHUBACTIONS }}
-          title: Merge dev into main
-          base: main
-          branch: dev
-          author: dclong <dclong@users.noreply.github.com>
-          assignees: dclong
+      - name: Create PR from dev to main
+        run: |
+          .github/workflows/pr.py --token ${{ secrets.GITHUBACTIONS }}
