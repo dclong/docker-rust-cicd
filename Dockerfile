@@ -13,4 +13,5 @@ COPY --from=dclong/rust \
         /usr/local/cargo/bin/rustfmt \
     /usr/local/cargo/bin/
 COPY --from=dclong/rust-utils /usr/local/cargo/bin/cargo-criterion /usr/local/cargo/bin/
+COPY --from=dclong/rust-utils /usr/bin/nperf /usr/bin/
 COPY settings/sysctl.conf /etc/sysctl.conf
