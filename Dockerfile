@@ -2,8 +2,9 @@
 FROM ubuntu:22.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        gcc libc-dev \
+        software-properties-common git \
         python3 python3-pip \
+        gcc libc-dev \
     && pip3 install github-rest-api
 ENV RUSTUP_HOME=/usr/local/rustup PATH=/usr/local/cargo/bin:$PATH
 COPY --from=dclong/rust /usr/local/rustup/ /usr/local/rustup/

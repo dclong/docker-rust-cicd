@@ -6,8 +6,9 @@ on:
 jobs:
   create_pull_request:
     runs-on: ubuntu-latest
+    container:
+      image: dclong/rust-cicd
     steps:
-      - uses: actions/checkout@v3
       - name: Create PR from dev to main
         run: |
           .github/workflows/pr.py --token ${{ secrets.GITHUBACTIONS }}
