@@ -1,6 +1,6 @@
 # dclong/rust-cicd [@DockerHub](https://hub.docker.com/r/dclong/rust-cicd/) | [@GitHub](https://github.com/dclong/docker-rust-cicd)
 
-Rust in Docker. 
+Docker image for Rust CICD. 
 
 ## Prerequisite
 
