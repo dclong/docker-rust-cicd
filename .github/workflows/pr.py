@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Create pull request.
+"""
 from argparse import ArgumentParser, Namespace
 from github_rest_api import Repository
 
@@ -23,6 +25,7 @@ def parse_args(args=None, namespace=None) -> Namespace:
 
 
 def main():
+    """Main function of the script."""
     args = parse_args()
     repo = Repository(args.token, "legendu-net", "docker-rust-cicd")
     repo.create_pull_request(
